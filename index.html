@@ -27,19 +27,18 @@
                         Entradas
                     </span>
                     <img src="./assets/income.svg" alt="Imagem de entradas">
-                                   
                 </h3>
-                <p>R$5.000,00</p>
+                <p id="incomeDisplay">R$0,00</p>
              </div>
 
              <div class="card">
                 <h3>
-                <span>
-                    Saídas
-                </span>
+                    <span>
+                        Saídas
+                    </span>
                 <img src="./assets/expense.svg" alt="Imagem de saídas">
                 </h3>
-                <p>R$2.000,00</p>
+                <p id="expenseDisplay">R$0,00</p>
              </div>
 
              <div class="card total">
@@ -49,7 +48,7 @@
                 </span>
                 <img src="./assets/total.svg" alt="Imagem de Total">
                  </h3>
-                <p>R$3.000,00</p>  
+                <p id="totalDisplay">R$0,00</p>  
              </div>       
                          
         </section>
@@ -80,18 +79,17 @@
         </section>
         </main>
         
-        <div class="modal-overlay active">
+        <div class="modal-overlay">
             <div class="modal">
                  <div id="form">
                      <h2>Nova Transação</h2>
-                      <form action="">
+                      <form action="" onsubmit="Form.submit(event)">
                          <div class="input-group">
                             <label 
                             class="sr-only" 
                             for="description">Descrição</label>
                       <input 
                              type="text" 
-                             step= "description"
                              id="description" 
                              name="description"
                              placeholder="Descrição"
@@ -107,10 +105,10 @@
                                     step= "0.01"
                                     id="amount" 
                                     name="amount"
-                                    placeholder="0.00"
+                                    placeholder="0,00"
                              />
 
-                             <small> Use o sinal - (negativo) para despesas e , (vírgula)
+                             <small class="help"> Use o sinal - (negativo) para despesas e , (vírgula)
                                  para casas decimais</small>
                          </div>
 
@@ -122,7 +120,6 @@
                              type="date" 
                              id="date" 
                              name="date"
-                             placeholder="date"
                       />                      
                           </div>
                               <div class="input-group actions">
@@ -139,7 +136,7 @@
 
        
 
-    <footer class="container"><p>dev.finances</p></footer>
+    <footer><p>dev.finances</p></footer>
 
     <script src="./scripts.js"></script>
 
